@@ -1,0 +1,2 @@
+kernel/drivers/bitmain/bitmain_spi.ko:
+kernel/drivers/bitmain/bitmain_lcd.ko:

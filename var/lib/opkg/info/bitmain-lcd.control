@@ -1,0 +1,14 @@
+Package: bitmain-lcd
+Version: 1.0.0-r0.0
+Description: bitmain-lcd version 1.0.0-r0
+ Kernel Module Bitmain lcd Driver
+Section: kernel/modules
+Priority: optional
+Maintainer: Angstrom Developers <angstrom-distro-devel@linuxtogo.org>
+License: CLOSED
+Architecture: beaglebone
+OE: bitmain-lcd
+Homepage: http://www.example.com
+Depends: kernel-module-bitmain-lcd
+Recommends: kernel (= 3.8.13)
+Source: file://lcd12864.c file://lcd12864.h file://lcdcharlib.h file://Makefile

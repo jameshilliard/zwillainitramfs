@@ -1,0 +1,13 @@
+Package: initc-bin
+Version: 1.0-r0.24
+Description: initc-bin version 1.0-r0
+ Initc application for production images for bitmainers
+Section: base
+Priority: optional
+Maintainer: Angstrom Developers <angstrom-distro-devel@linuxtogo.org>
+License: GPLv2
+Architecture: armv7ahf-vfp-neon
+OE: initc-bin
+Homepage: unknown
+Depends: libc6 (>= 2.17)
+Source: file://initc file://spitop_noncerev.rbf file://spitop_noncerev_c1.rbf file://spitop_noncerev_s5.rbf file://spitop_noncerev_s5_test.rbf file://spitop_noncerev_s2.rbf file://spitop_noncerev_s4p.rbf file://A8FPGA_1116_3channel.rbf file://initc.sh file://initc_emmc_flash.sh file://eeprom.dump file://spi-test file://asic_test file://inita file://waas file://COPYING

@@ -1,0 +1,80 @@
+#!/bin/sh
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+#DAEMON=/usr/sbin/lighttpd
+DAEMON=/usr/local/sbin/lighttpd
+NAME=lighttpd
+DESC="Lighttpd Web Server"
+OPTS="-f /config/lighttpd/config/www.conf"
+#OPTS="-f /etc/lighttpd.conf"
+
+case "$1" in
+  start)
+	echo -n "Starting $DESC: "
+	killall -s 9 php-cgi
+    killall -s 9 rrdtool
+    killall -s 9 monitor-www.sh
+    killall -s 9 miner-m-www.sh
+        # killall -s 9 sleep
+	echo 1 > /proc/sys/vm/drop_caches
+	echo 2 > /proc/sys/vm/drop_caches
+	echo 3 > /proc/sys/vm/drop_caches
+	ntpdate ptbtime1.ptb.de
+	hwclock --systohc
+	sync
+	echo "$NAME."
+    sleep 1
+	start-stop-daemon --start -x "$DAEMON" -- $OPTS
+
+
+	#start-stop-daemon -b -S -x screen -- -S cgminer -t cgminer -m -d "$DAEMON" $PARAMS --api-listen --default-config /config/cgminer.conf
+	
+	#screen -t moni1 -dms /etc/init.d/monitor-www.sh -dmS moni1
+    #screen -t moni2 -dms /etc/init.d/miner-m-www.sh -dmS moni2
+    ps
+	;;
+  stop)
+	echo -n "Stopping $DESC: "
+	killall -s 9 php-cgi
+    killall -s 9 rrdtool
+    killall -s 9 monitor-www.sh
+    killall -s 9 miner-m-www.sh
+    # killall -s 9 sleep
+	echo 1 > /proc/sys/vm/drop_caches
+	echo 2 > /proc/sys/vm/drop_caches
+	echo 3 > /proc/sys/vm/drop_caches
+	sleep 1
+	start-stop-daemon --stop -x "$DAEMON"
+
+
+	echo "$NAME."
+
+	;;
+  restart|force-reload)
+	echo -n "Restarting $DESC: "
+	killall -s 9 php-cgi
+    killall -s 9 rrdtool
+    killall -s 9 monitor-www.sh
+    killall -s 9 miner-m-www.sh
+    # killall -s 9 sleep
+	echo 1 > /proc/sys/vm/drop_caches
+	echo 2 > /proc/sys/vm/drop_caches
+	echo 3 > /proc/sys/vm/drop_caches
+	sync
+	sleep 1
+	start-stop-daemon --stop -x "$DAEMON"
+	sleep 1
+	start-stop-daemon --start -x "$DAEMON" -- $OPTS
+	#screen -t moni1 -s /etc/init.d/monitor-www.sh -dmS moni1
+    #screen -t moni2 -s /etc/init.d/miner-m-www.sh -dmS moni2
+    ps
+	echo "$NAME."
+	;;
+  *)
+	N=/etc/init.d/$NAME
+	echo "Usage: $N {start|stop|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

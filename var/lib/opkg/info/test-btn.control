@@ -1,0 +1,13 @@
+Package: test-btn
+Version: 1.0-r0.0
+Description: test-btn version 1.0-r0
+ Daemon to monitor recovery button
+Section: base
+Priority: optional
+Maintainer: Angstrom Developers <angstrom-distro-devel@linuxtogo.org>
+License: GPL
+Architecture: armv7ahf-vfp-neon
+OE: test-btn
+Homepage: unknown
+Depends: libc6 (>= 2.17)
+Source: file://test-key.c file://init_test file://test.sh file://test-hash.c file://test-hash.h file://COPYING

@@ -1,0 +1,13 @@
+Package: cgminer
+Version: 1.0-r1.2
+Description: cgminer version 1.0-r1
+ Cgminer bitcoin miner SW
+Section: base
+Priority: optional
+Maintainer: Angstrom Developers <angstrom-distro-devel@linuxtogo.org>
+License: CLOSED
+Architecture: armv7ahf-vfp-neon
+OE: cgminer
+Homepage: unknown
+Depends: libgcc1 (>= linaro-4.7), libtinfo5 (>= 5.9), libudev1 (>= 208), libcurl5 (>= 7.29.0), libncurses5 (>= 5.9), libc6 (>= 2.17)
+Source: file://cgminer-4.8.0.tar.bz2

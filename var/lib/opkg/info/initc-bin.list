@@ -1,0 +1,10 @@
+/etc/rcS.d/S36initc.sh
+/usr/bin/inita
+/usr/bin/initc
+/usr/bin/spi-test
+/etc/init.d/initc.sh
+/etc/eeprom.dump
+/usr/bin/waas
+/usr/bin/spitop_noncerev.rbf
+/etc/init.d/initc_emmc_flash.sh
+/usr/bin/asic_test

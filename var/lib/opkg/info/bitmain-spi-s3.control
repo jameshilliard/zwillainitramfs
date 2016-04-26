@@ -1,0 +1,14 @@
+Package: bitmain-spi-s3
+Version: 1.0.0-r0.8
+Description: bitmain-spi-s3 version 1.0.0-r0
+ Kernel Module Bitmain spi Fpga Driver
+Section: kernel/modules
+Priority: optional
+Maintainer: Angstrom Developers <angstrom-distro-devel@linuxtogo.org>
+License: CLOSED
+Architecture: beaglebone
+OE: bitmain-spi-s3
+Homepage: http://www.example.com
+Depends: kernel-module-bitmain-spi
+Recommends: kernel (= 3.8.13)
+Source: file://bitmain-asic-drv.c file://bitmain-asic.h file://fpga.c file://fpga.h file://sha2.c file://sha2.h file://spi.c file://spi.h file://set_pll.h file://Makefile

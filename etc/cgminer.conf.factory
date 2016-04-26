@@ -1,0 +1,26 @@
+{
+"pools" : [
+{
+"url" : "mining-lottery.eu:3333",
+"user" : "Zwilla.customer_",
+"pass" : "123"
+},
+{
+"url" : "mining-lottery.eu:3333",
+"user" : "Zwilla.customer_",
+"pass" : "123"
+},
+{
+"url" : "mining-lottery.eu:3333",
+"user" : "Zwilla.customer_",
+"pass" : "123"
+}
+]
+,
+"api-listen" : true,
+"api-network" : true,
+"bitmain-use-vil" : true,
+"api-allow" : "W:0/0",
+"bitmain-freq" : "700",
+"bitmain-voltage" : "0725"
+}

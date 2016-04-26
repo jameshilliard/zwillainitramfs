@@ -1,0 +1,1 @@
+[{"name":"Antminer S7 with Zwilla Mod - 4 Mode System","type":"cgminer","host":"127.0.0.1","port":"4028","settings":{"algorithm":"SHA256","temps":{"warning":"69","danger":"75","enabled":1},"hwErrors":{"type":"percent","warning":{"int":"0.05","percent":1},"danger":{"int":"10","percent":10},"enabled":0}}},}]

@@ -1,0 +1,6 @@
+/usr/bin/test-btn
+/etc/init.d/test-btn.sh
+/etc/rcS.d/S95test-btn.sh
+/usr/bin/test.sh
+/usr/bin/test-hash
+/etc/rcS.d/
